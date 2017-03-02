@@ -1,0 +1,42 @@
+<div class="row" *ngIf="!addTag">
+    <a class="btn btn-default" href="/add" style="float: right; padding: 5px">Add Pokemon</a>
+</div>
+
+<div class="row">
+    <table class="table table-striped" *ngIf="pokemons.length > 0">
+        <thead>
+            <tr>
+                <th>Dex No</th>
+                <th>Name</th>
+                <th>Type1</th>
+                <th>Type2</th>
+                <th>HP</th>
+                <th>Attack</th>
+                <th>Defense</th>
+                <th>Special Attack</th>
+                <th>Special Defense</th>
+                <th>Speed</th>
+                <th>Total</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pokemon of pokemons">
+                <td>{{ pokemon.dexNo }}</td>
+                <td>{{ pokemon.name }}</td>
+                <td>{{ pokemon.type1 }}</td>
+                <td>{{ pokemon.type2 }}</td>
+                <td>{{ pokemon.baseHP }}</td>
+                <td>{{ pokemon.baseAttack }}</td>
+                <td>{{ pokemon.baseDefense }}</td>
+                <td>{{ pokemon.baseSpecialAttack }}</td>
+                <td>{{ pokemon.baseSpecialDefense }}</td>
+                <td>{{ pokemon.baseSpeed }}</td>
+                <td>{{ pokemon.baseTotal }}</td>
+                <td><a href="/edit/{{pokemon.id}}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                <td><a (click)="deletePokemon(pokemon.id)"><span class="glyphicon glyphicon-remove"></span></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

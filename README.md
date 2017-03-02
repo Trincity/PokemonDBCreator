@@ -1,45 +1,31 @@
-# PokemonDBCreator
-Using Entity Framework and Angular 2.0, populates a database with Pokemon data.
+# PokemonDbCreator
 
-This is a simple web application that can be used to populate and make changes to a database for Pokemon info.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.25.5.
 
-Setup:
-1. Install node.js
-2. Using npm, install:
-  - Angular
-  - Angular-cli
-3. Create your project using command line
-  -ie. ng new myPokemonDbCreator
-4. To start project, on command line type: 'ng serve' or 'ng start'
-5. Create a Database named PokemonDb
-  - Tables:
-    1. Pokemon
-      - id (primary key, int, not null)
-      - dexNo (int, not null)
-      - name (varchar(30), not null)
-      - type1 (varchar(20), not null) will be changed to (int, FK, not null)
-      - type2 (varchar(20), null) will be changed to (int, FK, not null)
-      - baseHP (int, not null)
-      - baseAttack (int, not null)
-      - baseDefense (int, not null)
-      - baseSpecialAttack (int, not null)
-      - baseSpecialDefense (int, not null)
-      - baseSpeed (int, not null)
-      - baseTotal (int, not null)
-    2. Moves
-      - id (PK, int, not null)
-      - moveid (int, not null)
-      - name (varchar(100), not null)
-      - description (varchar(500) not null)
-      - type (FK, int, not null)
-      - category (varchar(20), not null)
-      - contest (varchar(20), not null)
-      - pp (int, not null)
-      - power (int, null)
-      - accuracy (int, null)
-      - gen (int, not null)
-    3. Types
-      - id (PK, int, not null)
-      - Type (varchar(20), not null
+## Development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Using Entity Framework to create the webai calls from Angular to Database.
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
+
+## Deploying to GitHub Pages
+
+Run `ng github-pages:deploy` to deploy to GitHub Pages.
+
+## Further help
+
+To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

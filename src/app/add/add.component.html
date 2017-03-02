@@ -1,0 +1,95 @@
+<div class="row">
+  <form role="form" (ngSubmit)="onSubmit()" [formGroup]="addForm">
+    <table>
+      <tr>
+        <th>
+          Dex Number
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          Type 1
+        </th>
+        <th>
+          Type 2
+        </th>
+        <th>
+          HP
+        </th>
+        <th>
+          Attack
+        </th>
+        <th>
+          Defense
+        </th>
+        <th>
+          Special Attack
+        </th>
+        <th>
+          Special Defense
+        </th>
+        <th>
+          Speed
+        </th>
+        <th>
+        </th>
+      </tr>
+      <tr>
+        <td class="form-group">
+          <input type="number" id="dexNo" name="dexNo" formControlName="dexNo" [(ngModel)]="data.dexNo" required/>
+        </td>
+
+        <td class="form-group">
+          <input type="text" id="name" name="name" formControlName="name" [(ngModel)]="data.name" required/>
+        </td>
+
+        <td class="form-group">
+          <select formControlName="type1" [(ngModel)]="data.type1" required>
+            <option *ngFor="let type of types" [value]="type">{{type}}</option>
+          </select>
+        </td>
+        <td class="form-group">
+          <select formControlName="type2" [(ngModel)]="data.type2">
+            <option [selected]="selected" [value]="">None</option>
+            <option *ngFor="let type of types" [value]="type" [selected]="type == 'Normal'">{{type}}</option>
+          </select>
+        </td>
+
+        <td class="form-group">
+          <input type="number" id="hp" name="hp" formControlName="hp" [(ngModel)]="data.baseHP" required/>
+        </td>
+
+        <td class="form-group">
+          <input type="number" id="attack" name="attack" formControlName="attack" [(ngModel)]="data.baseAttack" required/>
+        </td>
+
+        <td class="form-group">
+          <input type="number" id="defense" name="defense" formControlName="defense" [(ngModel)]="data.baseDefense" required/>
+        </td>
+
+        <td class="form-group">
+          <input type="number" id="spAttack" name="spAttack" formControlName="spAttack" [(ngModel)]="data.baseSpecialAttack" required/>
+        </td>
+
+        <td class="form-group">
+          <input type="number" id="spDefense" name="spDefense" formControlName="spDefense" [(ngModel)]="data.baseSpecialDefense" required/>
+        </td>
+
+        <td class="form-group">
+          <input type="number" id="speed" name="speed" formControlName="speed" [(ngModel)]="data.baseSpeed" required/>
+        </td>
+
+        <td>
+          <button type="submit" class="btn btn-primary" [disabled]="!addForm.valid">Add Pokemon</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<div class="row">
+  <a href="/list" style="float: right;" class="btn btn-default">Cancel</a>
+</div>
+
+<app-pokemon></app-pokemon>

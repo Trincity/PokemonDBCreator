@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+  background: radial-gradient(circle, white, lightblue);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+    color: navy;
+    font-family: verdana;
+    font-size: 300%;
+}
+
+body {
+  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+div {
+  padding: 3px;
+}
+
+input {
+  width: 100%;
+}
+
+.title {
+    color: navy;
+    font-family: verdana;
+    font-size: 500%;
+}
+
