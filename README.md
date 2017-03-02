@@ -38,7 +38,7 @@ Setup:
       - power (int, null)
       - accuracy (int, null)
       - gen (int, not null)
-     3. Types
+    3. Types
       - id (PK, int, not null)
       - Type (varchar(20), not null
 
