@@ -1,4 +1,4 @@
-export class pokemonMove {
+export class Move {
     public moveId: number;
     public name: string;
     public type: number;

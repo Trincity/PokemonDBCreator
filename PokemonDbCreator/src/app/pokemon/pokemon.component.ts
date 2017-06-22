@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PokemonService } from '../services/pokemon.service';
+import { TypeService } from '../services/type.service';
 import { AscendingOrderPipe } from '../pipes/ascending-order.pipe';
 
 @Component({
@@ -12,7 +13,7 @@ export class PokemonComponent implements OnInit {
   pokemons = [];
   addTag = false;
 
-  constructor(private _pokemonService: PokemonService, private _router: Router) { }
+  constructor(private _pokemonService: PokemonService, private _typeService: TypeService, private _router: Router) { }
 
   ngOnInit() {
     this._pokemonService.getAllPokemon()
@@ -22,6 +23,7 @@ export class PokemonComponent implements OnInit {
       if(this._router.url == '/add'){
         this.addTag = true;
       }
+    this._typeService.types = this._typeService.getAllTypes();
   }
 
   deletePokemon(id){

@@ -7,7 +7,7 @@ import { Pokemon } from '../models/pokemon';
 
 @Injectable()
 export class PokemonService {
-  server = Config.server;
+  server = Config.pokemonServer;
 
   constructor(private http : Http) { }
 
