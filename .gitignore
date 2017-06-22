@@ -1,0 +1,12 @@
+### Ignore .vs folder ###
+PokemonDbCreator_APIProject/.vs/*
+
+### Ignore node_modules folder ###
+PokemonDbCreator/node_modules/*
+
+### Ignore bin and obj folders ###
+PokemonDbCreator_APIProject/bin/*
+PokemonDbCreator_APIProject/obj/*
+
+### Ignore web.config ###
+PokemonDbCreator_APIProject/web.config
