@@ -9,40 +9,36 @@ namespace PokemonDbCreator_APIProject.Models
     [Table("Pokemon")]
     public partial class Pokemon
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; }
+        public Pokemon()
+        {
+            pokemonMoves = new List<PokemonMove>();
+            types = new List<PokemonType>();
+        }
 
-        [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Pokemon_id { get; set; }
+        
         [StringLength(50)]
         public string name { get; set; }
 
         public int dexNo { get; set; }
-
-        [Required]
-        [StringLength(20)]
-        public string type1 { get; set; }
-
-        public string type2 { get; set; }
         
-        [Required]
         public int baseHP { get; set; }
-
-        [Required]
+        
         public int baseAttack { get; set; }
-
-        [Required]
+        
         public int baseDefense { get; set; }
-
-        [Required]
+        
         public int baseSpecialAttack { get; set; }
-
-        [Required]
+        
         public int baseSpecialDefense { get; set; }
-
-        [Required]
+        
         public int baseSpeed { get; set; }
-
-        [Required]
+        
         public int baseTotal { get; set; }
+        
+        public virtual ICollection<PokemonType> types { get; set; }
+        
+        public virtual ICollection<PokemonMove> pokemonMoves { get; set; }
     }
 }

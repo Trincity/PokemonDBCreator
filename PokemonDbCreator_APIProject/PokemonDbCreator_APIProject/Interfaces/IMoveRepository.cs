@@ -8,7 +8,7 @@ using PokemonDbCreator_APIProject.Interfaces;
 
 namespace PokemonDbCreator_APIProject.Interfaces
 {
-    interface IPokemonRepository : IRepository<Pokemon>
+    interface IMoveRepository : IRepository<Move>
     {
     }
 }

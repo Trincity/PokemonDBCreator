@@ -10,7 +10,6 @@ export class TypeService {
   server = Config.typeServer;
   types : Array<Types>;
 
-  public types = this.getAllTypes();
   constructor(private http : Http) { }
 
   getAllTypes() : Observable<any>{

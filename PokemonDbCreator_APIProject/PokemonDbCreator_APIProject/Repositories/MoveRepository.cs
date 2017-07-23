@@ -8,7 +8,7 @@ using PokemonDbCreator_APIProject.Database;
 
 namespace PokemonDbCreator_APIProject.Repositories
 {
-    public class PokemonRepository : Repository<Pokemon>, IPokemonRepository
+    public class MoveRepository : Repository<Move>, IMoveRepository
     {
     }
 }

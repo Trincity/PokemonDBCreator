@@ -11,7 +11,7 @@ namespace PokemonDbCreator_APIProject.Models
     public class Move
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; }
+        public int Move_id { get; set; }
 
         [Required]
         public int moveId { get; set; }

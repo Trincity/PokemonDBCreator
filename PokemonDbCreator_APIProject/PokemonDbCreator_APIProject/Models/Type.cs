@@ -11,7 +11,7 @@ namespace PokemonDbCreator_APIProject.Models
     public class Type
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; }
+        public int Type_id { get; set; }
 
         [Required]
         public string type { get; set; }
