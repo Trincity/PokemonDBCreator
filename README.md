@@ -9,37 +9,13 @@ Setup:
  - Angular
  - Angular-cli
 3. Create your project using command line
- -ie. ng new myPokemonDbCreator
+ - ie. ng new myPokemonDbCreator
 4. To start project, on command line type: 'ng serve' or 'ng start'
-5. Create a Database named PokemonDb
- - Tables:
-    1. Pokemon
-       -id (primary key, int, not null)
-       -dexNo (int, not null)
-       -name (varchar(30), not null)
-       -type1 (varchar(20), not null) will be changed to (int, FK, not null)
-       -type2 (varchar(20), null) will be changed to (int, FK, not null)
-       -baseHP (int, not null)
-       -baseAttack (int, not null)
-       -baseDefense (int, not null)
-       -baseSpecialAttack (int, not null)
-       -baseSpecialDefense (int, not null)
-       -baseSpeed (int, not null)
-       -baseTotal (int, not null)
-    2. Moves
-       -id (PK, int, not null)
-       -moveid (int, not null)
-       -name (varchar(100), not null)
-       -description (varchar(500) not null)
-       -type (FK, int, not null)
-       -category (varchar(20), not null)
-       -contest (varchar(20), not null)
-       -pp (int, not null)
-       -power (int, null)
-       -accuracy (int, null)
-       -gen (int, not null)
-    3. Types
-       -id (PK, int, not null)
-       -Type (varchar(20), not null)
+5. The server project is now Code-First Entity Framework. I don't know if other IDEs support Code-First Migrations, but here are the steps for setting it up in Visual Studio.
+ - Install Entity Framework using either Nuget Package Manager or using the Package Manager Console running the "Install-Package EntityFramework" command.
+ - Using the Package Manager Console:
+  1. "Enable-Migrations"
+  2. "Add-Migration", type the name of your migration
+  3. "Update-Database"
         
 Using Entity Framework to create the webai calls from Angular to Database.
